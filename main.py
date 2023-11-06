@@ -1,8 +1,13 @@
 from flask import Flask, render_template, jsonify
 import json
 from flask_pymongo import PyMongo
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
+
+database_pass = os.getenv("DATABASE_PASSWORD")
+
 app.config[
     "MONGO_URI"
 ] = "mongodb+srv://yousufshaik13579:Yousuf_shaik_1@test-flaskproject.mzojihz.mongodb.net/flaskTest"
